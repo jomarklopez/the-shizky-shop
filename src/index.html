@@ -10,12 +10,11 @@
 	<body>
 		<header>
 			<div class="title-container">
-				<a href=""
-					><img
-						class="header-logo"
-						src="img/logo.png"
-						alt="Shop logo with cartoon dogs"
-				/></a>
+				<img
+					class="header-logo"
+					src="img/logo.png"
+					alt="Shop logo with cartoon dogs"
+				/>
 			</div>
 			<div class="navbar">
 				<ul class="nav">
@@ -54,10 +53,17 @@
 
 		<div class="main" id="main">
 			<div class="slideNav" id="slideNav">
-				<a href="">Home</a>
-				<a href="">Shop by Pet</a>
-				<a href="">Products</a>
-				<a href="">Promos</a>
+				<div class="nav-container">
+					<img
+						class="header-logo"
+						src="img/logo.png"
+						alt="Shop logo with cartoon dogs"
+						size="cover"
+					/>
+					<a href="">Shop by Pet</a>
+					<a href="">Products</a>
+				</div>
+
 				<div class="search-container">
 					<div class="search">
 						<button type="submit" class="searchButton"></button>
@@ -68,9 +74,10 @@
 						/>
 					</div>
 				</div>
-				<a id="slideNav-cartText">Cart</a>
-				<button type="button" class="cartButton"></button>
-				
+				<div class="cart-container" id="navCart">
+					<button type="button" class="cartButton"></button>
+					<a id="slideNav-cartText">Cart</a>
+				</div>
 			</div>
 			<!-- TODO -->
 			<div class="announcements-container">

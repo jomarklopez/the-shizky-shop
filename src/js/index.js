@@ -25,3 +25,16 @@ window.onscroll = () => {
     stickyNavBar();
 };
 
+(function () {
+
+    document.getElementById("navCart").addEventListener("click", () => {
+        document.querySelector(".shopping-cart").fadeToggle("fast")
+    });
+
+})();
+
+/* function cartToggle() {
+    $("#navCart").on("click", function () {
+        $(".shopping-cart").fadeToggle("fast");
+    });
+} */
