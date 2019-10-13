@@ -26,14 +26,13 @@ h2 {
 
 header {
 	display: grid;
-	height: 13vw;
 	/* cd1413 */
 	background-color: #ed143c;
 	grid-template-rows: 60% 1fr;
 	grid-template-columns: 3fr 1.5fr;
 	grid-template-areas:
 		'title rightnav'
-		'nav search';
+		'navbar navbar';
 }
 
 .title-container {
@@ -95,12 +94,56 @@ header {
 	background-image: url(../img/dogcart.png);
 }
 
+.navbar {
+	grid-area: navbar;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+
+	align-items: center;
+	background-color: #ed143c;
+
+	padding: 1vw 3vw;
+}
+
+.nav li {
+	float: left;
+	list-style-type: none;
+
+	margin-right: 20px;
+	padding: 0;
+}
+
+.nav a {
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 1.2rem;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	transition: 0.3s;
+}
+
+.nav a:link,
+a:visited {
+	color: white;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.nav a:hover,
+a:active {
+	color: #ed143c;
+	background-color: white;
+}
+
+/* SEARCH BOX */
 .search-container {
-	grid-area: search;
-	width: 100%;
-	margin: 10px;
-	align-self: center;
-	justify-self: end;
+	float: left;
+}
+
+#search {
+	width: 20vw;
 }
 
 .search {
@@ -146,41 +189,53 @@ button:focus {
 	outline: 0;
 }
 
-.nav {
-	grid-area: nav;
-	align-self: center;
-	justify-self: start;
-	margin-left: 2%;
+/* DROPDOWN NAVIGATOR */
+
+.slideNav {
+	background-color: #ed143c;
+	position: fixed;
+	top: -100px;
+	width: 100%;
+	padding: 10px 0px;
+	transition: top 0.5s;
 }
 
-.nav li {
+.slideNav a {
 	float: left;
-	list-style-type: none;
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
 
-	margin-right: 20px;
-	padding: 0;
-}
-
-.nav a {
 	border-radius: 10px;
 	padding: 5px;
 	font-size: 1.2rem;
 	font-family: 'Roboto', sans-serif;
 	color: white;
+	margin: 0px 10px;
 	transition: 0.3s;
 }
 
-.nav a:link,
-a:visited {
-	color: white;
-	padding: 5px 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
+.slideNav .search-container {
+	margin-left: 20px;
 }
 
-.nav a:hover,
-a:active {
+.slideNav .search {
+	width: 200%;
+}
+
+.slideNav .cartButton {
+	float: right;
+	width: 2.5vw;
+	height: 2.5vw;
+}
+
+#slideNav-cartText {
+	float: right;
+	cursor: pointer;
+}
+
+.slideNav a:hover {
 	color: #ed143c;
 	background-color: white;
 }
