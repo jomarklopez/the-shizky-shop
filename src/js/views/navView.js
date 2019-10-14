@@ -10,3 +10,7 @@ export const removeStickyNav = () => {
     elements.slideNav.style.transition = "0s";
     elements.slideNav.style.top = "-100px";
 }
+
+export const updateItemCount = () => {
+    elements.item__countInput.value = '1';
+}

@@ -16,6 +16,9 @@
 					alt="Shop logo with cartoon dogs"
 				/>
 			</div>
+			<div class="social-container">
+				<!-- TODO UPSIDE DOWN DOG SAYING VISIT US ON FB,IG,OR VIBER -->
+			</div>
 			<div class="navbar">
 				<ul class="nav">
 					<li><a href="">Home</a></li>
@@ -80,8 +83,15 @@
 					<div class="dropdown-wrapper">
 						<div class="dropdown-content">
 							<div class="cart-header">
-								<div class="cartButton"></div>
-								<span class="numitems">3</span>
+								<div class="cart-totalItems">
+									<figure>
+										<img
+											src="../img/dogcart-dark.png"
+											alt="Dog Cart Icon"
+										/>
+									</figure>
+									<span class="numitems">3 Items</span>
+								</div>
 								<div class="cart-total">
 									<span id="total">Total:</span>
 									<span class="main-color-text"
@@ -91,22 +101,108 @@
 							</div>
 							<ul class="items">
 								<li>
-									<a class="likes__link" href="#23456">
-										<figure class="item">
-											<!-- <img
-											src="img/dogproduct2.png"
-											alt="Dog Food"
-										/> -->
+									<a class="item__link" href="#23456">
+										<figure class="item__img">
+											<img
+												src="img/dogproduct4.png"
+												alt="Canine Dewormer"
+											/>
 										</figure>
 										<div class="item__data">
-											<h4 class="item__name">
-												Dog food
-											</h4>
-											<p class="item__quantity">
-												1
+											<p class="item__name">
+												Canine Dewormer
 											</p>
 										</div>
 									</a>
+									<div class="item_controller-wrapper">
+										<div class="item__count">
+											<input
+												type="number"
+												min="1"
+												max="9"
+												step="1"
+												value="1"
+											/>
+											<div class="item__count-nav">
+												<div
+													class="item__count-button item__count-up"
+												>
+													+
+												</div>
+												<div
+													class="item__count-button item__count-down"
+												>
+													-
+												</div>
+											</div>
+										</div>
+										<div
+											type="button"
+											name="delete"
+											class="box"
+										>
+											<div class="box">
+												<div
+													class="btn-icon close-icon"
+												>
+													<div class="x left"></div>
+													<div class="x right"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="item__link" href="#23456">
+										<figure class="item__img">
+											<img
+												src="img/dogproduct2.png"
+												alt="Milk Bone"
+											/>
+										</figure>
+										<div class="item__data">
+											<p class="item__name">
+												Milk Bone
+											</p>
+										</div>
+									</a>
+									<div class="item_controller-wrapper">
+										<div class="item__count">
+											<input
+												type="number"
+												min="1"
+												max="9"
+												step="1"
+												value="1"
+											/>
+											<div class="item__count-nav">
+												<div
+													class="item__count-button item__count-up"
+												>
+													+
+												</div>
+												<div
+													class="item__count-button item__count-down"
+												>
+													-
+												</div>
+											</div>
+										</div>
+										<div
+											type="button"
+											name="delete"
+											class="box"
+										>
+											<div class="box">
+												<div
+													class="btn-icon close-icon"
+												>
+													<div class="x left"></div>
+													<div class="x right"></div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</li>
 							</ul>
 						</div>

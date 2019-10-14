@@ -1,5 +1,5 @@
 import * as navView from './views/navView'
-
+import { elements } from './views/base'
 
 // Get the navbar
 
@@ -25,16 +25,16 @@ window.onscroll = () => {
     stickyNavBar();
 };
 
-(function () {
+elements.items.addEventListener('click', e => {
+    console.log(e.target);
+    //
+    if (e.target.matches('.item__count-up, .item__count-up *')) {
+        //Increase Number of Items
 
-    document.getElementById("navCart").addEventListener("click", () => {
-        document.querySelector(".shopping-cart").fadeToggle("fast")
-    });
+    } else if (e.target.matches('.item__count-down, .item__count-down *')) {
+        //Decrease Number of Items
+    } else if (e.target.matches('.box, .box *')) {
+        //Delete item
 
-})();
-
-/* function cartToggle() {
-    $("#navCart").on("click", function () {
-        $(".shopping-cart").fadeToggle("fast");
-    });
-} */
+    }
+});
