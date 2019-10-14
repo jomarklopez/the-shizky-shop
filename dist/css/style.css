@@ -20,14 +20,6 @@ li {
 	list-style-type: none;
 }
 
-@media screen and (max-width: 600px) {
-	.dog-items {
-		width: 100%;
-		display: block;
-		margin-bottom: 20px;
-	}
-}
-
 header {
 	display: grid;
 	/* cd1413 */
@@ -35,8 +27,16 @@ header {
 	grid-template-rows: 60% 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
-		'title . rightnav'
+		'visitus title rightnav'
 		'navbar navbar navbar';
+}
+
+.visit-container {
+	grid-area: visitus;
+}
+
+.visit-container .header-visitus {
+	max-width: 30%;
 }
 
 .title-container {
@@ -282,10 +282,10 @@ button:focus {
 
 .dropdown-wrapper {
 	position: absolute;
-	top: 90px;
+	top: 5vw;
 
-	opacity: 1;
-	right: 1vw;
+	opacity: 0;
+	right: -40vw;
 	transition-duration: 0.3s;
 	transition-delay: 0.3s;
 }
