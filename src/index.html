@@ -4,16 +4,23 @@
 		<meta charset="UTF-8" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<title>The Shizky Shop</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<header>
-			<div class="visit-container">
+			<div class="social-container">
 				<img
 					class="header-visitus"
 					src="img/visitusDog.png"
 					alt="Dog saying Visit us!"
 				/>
+				<a href="#" class="fa fa-facebook"></a>
+				<a href="#" class="fa fa-instagram"></a>		
 			</div>
 			<div class="title-container">
 				<img
@@ -22,33 +29,38 @@
 					alt="Shop logo with cartoon dogs"
 				/>
 			</div>
-			<div class="social-container">
-				<!-- TODO UPSIDE DOWN DOG SAYING VISIT US ON FB,IG,OR VIBER -->
-			</div>
 			<div class="navbar">
-				<ul class="nav">
+				<ul class="nav" >
 					<li><a href="">Home</a></li>
 					<li><a href="">Shop by Pet</a></li>
 					<li><a href="">Products</a></li>
 					<li><a href="">Promos</a></li>
 				</ul>
-				<div class="search-container">
-					<div class="search">
-						<button type="submit" class="searchButton"></button>
-						<input
-							type="text"
-							class="searchForm"
-							placeholder="Search"
-						/>
-					</div>
+				<div class="navBurgerIcon">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
 				</div>
+				<div class="search" id="search">
+					<label for="search-input"></label>
+					<input aria-label="Search" autocomplete="on" id="search-input" name="search-input" placeholder="Search" speech type="search">
+					<svg viewbox="0 0 24 24">
+						<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+						<path d="M0 0h24v24H0z" fill="none">
+					</svg>
+				</div>
+			</div>
+			<div class="hamburgMenu" id="hamburgMenu">
+				<a href="#Home">Home</a>
+				<a href="#Products">Products</a>
+				<a href="#Promos">Visit Us!</a>
 			</div>
 
 			<ul class="rightNav-container">
 				<li>
 					<div class="rn-wrapper">
 						<button type="button" class="userButton"></button>
-						<a>My Account</a>
+						<a>Account</a>
 					</div>
 				</li>
 				<li>
@@ -73,15 +85,13 @@
 					<a href="">Products</a>
 				</div>
 
-				<div class="search-container">
-					<div class="search">
-						<button type="submit" class="searchButton"></button>
-						<input
-							type="text"
-							class="searchForm"
-							placeholder="Search"
-						/>
-					</div>
+				<div class="search" id="search">
+					<label for="search-input"></label>
+					<input aria-label="Search" autocomplete="on" id="search-input" name="search-input" placeholder="Search" speech type="search">
+					<svg viewbox="0 0 24 24">
+						<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+						<path d="M0 0h24v24H0z" fill="none">
+					</svg>
 				</div>
 				<div class="cart-container" id="navCart">
 					<button type="button" class="cartButton"></button>
@@ -217,19 +227,26 @@
 			</div>
 
 			<!-- TODO -->
-			<div class="announcements-container">
-				<div class="carousel-slides">
-					<!-- <img src="img/slider5.jpg" id="lastClone" alt="" /> -->
+			<div class="carousel-container">
+				<div class="carousel-slides fade">
 					<img src="img/slider1.jpg" alt="" />
-					<img src="img/slider2.jpg" alt="" />
-					<img src="img/slider3.jpg" alt="" />
-					<img src="img/slider4.jpg" alt="" />
-					<img src="img/slider5.jpg" alt="" />
-					<img src="img/slider1.jpg" id="firstClone" alt="" />
 				</div>
+				<div class="carousel-slides fade">
+					<img src="img/slider2.jpg" alt="" />
+				</div>
+				<div class="carousel-slides fade">
+					<img src="img/slider3.jpg" alt="" />
+				</div>
+				<div class="carousel-slides fade">
+					<img src="img/slider4.jpg" alt="" />
+				</div>
+				<div class="carousel-slides fade">
+					<img src="img/slider5.jpg" alt="" />
+				</div>
+				<a class="prev" id="carousel-prevBtn">&#10094;</a>
+				<a class="next" id="carousel-nextBtn">&#10095;</a>
 			</div>
-			<!-- <button id="carousel-prevBtn">Prev</button>
-			<button id="carousel-prevBtn">Next</button> -->
+
 			<div class="mostwanted-container">
 				<h1>Best Sellers</h1>
 				<div class="mw-wrapper">
@@ -271,12 +288,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="items-container">
+			<div class="deals-container">
 				<div class="row dog-items">
 					<h1>Dog deals of the week</h1>
 
 					<br />
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct1.png" alt="" />
 							<div class="img-info">
@@ -309,7 +326,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct2.png" alt="" />
 							<div class="img-info">
@@ -342,7 +359,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct3.png" alt="" />
 							<div class="img-info">
@@ -375,7 +392,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct4.png" alt="" />
 							<div class="img-info">
@@ -412,7 +429,7 @@
 				<div class="row cat-items">
 					<h1>Cat deals of the week</h1>
 					<br />
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct1.png" alt="" />
 							<div class="img-info">
@@ -441,7 +458,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct2.png" alt="" />
 							<div class="img-info">
@@ -474,7 +491,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct3.png" alt="" />
 							<div class="img-info">
@@ -507,7 +524,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct4.png" alt="" />
 							<div class="img-info">
@@ -544,7 +561,7 @@
 				<div class="row pig-items">
 					<h1>Pig deals of the week</h1>
 					<br />
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct1.png" alt="" />
 							<div class="img-info">
@@ -577,7 +594,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct2.png" alt="" />
 							<div class="img-info">
@@ -610,7 +627,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct3.png" alt="" />
 							<div class="img-info">
@@ -643,7 +660,7 @@
 						</div>
 					</div>
 
-					<div class="el-wrapper">
+					<div class="item-wrapper">
 						<div class="box-up">
 							<img class="img" src="img/dogproduct4.png" alt="" />
 							<div class="img-info">

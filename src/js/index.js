@@ -20,17 +20,28 @@ function stickyNavBar() {
     }
 }
 
+function triggerHamburgerMenu() {
+    var x = document.getElementById("hamburgMenu");
+    elements.burgerMenuIcon.classList.toggle("change");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 // Main Controllers (Event Listeners etc.)
 window.onscroll = () => {
     stickyNavBar();
 };
+
+elements.burgerMenuIcon.addEventListener('click', triggerHamburgerMenu);
 
 elements.items.addEventListener('click', e => {
     console.log(e.target);
     //
     if (e.target.matches('.item__count-up, .item__count-up *')) {
         //Increase Number of Items
-
     } else if (e.target.matches('.item__count-down, .item__count-down *')) {
         //Decrease Number of Items
     } else if (e.target.matches('.box, .box *')) {
@@ -38,3 +49,22 @@ elements.items.addEventListener('click', e => {
 
     }
 });
+
+//Carousel
+
+
+// Initialize Slide
+navView.showSlides(1);
+
+
+
+// Previous/Next Buttons
+elements.carouselSlide.addEventListener('click', e => {
+    if (e.target.matches('.prev, .prev *')) {
+        //previous slide
+        navView.prevSlide();
+    } else if (e.target.matches('.next, .next *')) {
+        //next slide
+        navView.nextSlide();
+    }
+})
