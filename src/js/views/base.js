@@ -8,5 +8,9 @@ export const elements = {
     carouselSlide: document.querySelector('.carousel-container'),
     carouselImages: document.querySelectorAll(".carousel-slides"),
     carouselPrevButton: document.querySelector('.prev'),
-    carouselNextButton: document.querySelector('.next')
+    carouselNextButton: document.querySelector('.next'),
+    itemCarousel: document.querySelector('.item-slides-wrapper'),
+    itemSlides: document.querySelectorAll('.item-slide'),
+    itemCarouselPrevButton: document.querySelector('.PrevItemBtn'),
+    itemCarouselNextButton: document.querySelector('.NextItemBtn')
 }

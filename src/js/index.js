@@ -68,3 +68,7 @@ elements.carouselSlide.addEventListener('click', e => {
         navView.nextSlide();
     }
 })
+
+// ITEM CAROUSEL
+elements.itemCarouselPrevButton.addEventListener('click', navView.prevSLIDE);
+elements.itemCarouselNextButton.addEventListener('click', navView.nextSLIDE);

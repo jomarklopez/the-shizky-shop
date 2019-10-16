@@ -8,14 +8,14 @@ export const renderStickyNav = () => {
 
 export const removeStickyNav = () => {
     elements.slideNav.style.transition = "0s";
-    elements.slideNav.style.top = "-100px";
+    elements.slideNav.style.top = "-40vw";
 }
 
 export const updateItemCount = () => {
     elements.item__countInput.value = '1';
 }
 
-//CAROUSEL
+// ANNOUNCEMENTS CAROUSEL
 
 let slideIndex = 1;
 var slideAuto;
@@ -62,4 +62,35 @@ export const nextSlide = () => {
         clearTimeout(slideAuto);
         setTimeout(showSlides, 4000);
     }
+}
+
+// ITEM CAROUSEL 
+
+let currSet = 0;
+
+export const nextItemSet = () => {
+    if (currSet !== 200) {
+        currSet += 100;
+    } else {
+        currSet = 0;
+    }
+    console.log(currSet);
+    elements.itemCarousel.style.marginLeft = `-${currSet}%`;
+}
+
+let counter = 0;
+const size = elements.itemSlides[0].clientWidth;
+
+elements.itemCarousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+export const prevSLIDE = () => {
+    elements.itemCarousel.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    elements.itemCarousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
+}
+
+export const nextSLIDE = () => {
+    elements.itemCarousel.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    elements.itemCarousel.style.transform = 'translateX(' + (-size * counter) + 'px)';
 }

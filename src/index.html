@@ -1,701 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<title>The Shizky Shop</title>
 
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
-	<body>
-		<header>
-			<div class="social-container">
-				<img
-					class="header-visitus"
-					src="img/visitusDog.png"
-					alt="Dog saying Visit us!"
-				/>
-				<a href="#" class="fa fa-facebook"></a>
-				<a href="#" class="fa fa-instagram"></a>		
-			</div>
-			<div class="title-container">
-				<img
-					class="header-logo"
-					src="img/logo.png"
-					alt="Shop logo with cartoon dogs"
-				/>
-			</div>
-			<div class="navbar">
-				<ul class="nav" >
-					<li><a href="">Home</a></li>
-					<li><a href="">Shop by Pet</a></li>
-					<li><a href="">Products</a></li>
-					<li><a href="">Promos</a></li>
-				</ul>
-				<div class="navBurgerIcon">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
-				</div>
-				<div class="search" id="search">
-					<label for="search-input"></label>
-					<input aria-label="Search" autocomplete="on" id="search-input" name="search-input" placeholder="Search" speech type="search">
-					<svg viewbox="0 0 24 24">
-						<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-						<path d="M0 0h24v24H0z" fill="none">
-					</svg>
-				</div>
-			</div>
-			<div class="hamburgMenu" id="hamburgMenu">
-				<a href="#Home">Home</a>
-				<a href="#Products">Products</a>
-				<a href="#Promos">Visit Us!</a>
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<title>The Shizky Shop</title>
 
-			<ul class="rightNav-container">
-				<li>
-					<div class="rn-wrapper">
-						<button type="button" class="userButton"></button>
-						<a>Account</a>
-					</div>
-				</li>
-				<li>
-					<div class="rn-wrapper">
-						<button type="button" class="cartButton"></button>
-						<a>Cart</a>
-					</div>
-				</li>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<header>
+		<div class="social-container">
+			<img class="header-visitus" src="img/visitusDog.png" alt="Dog saying Visit us!" />
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-instagram"></a>
+		</div>
+		<div class="title-container">
+			<img class="header-logo" src="img/logo.png" alt="Shop logo with cartoon dogs" />
+		</div>
+		<div class="navbar">
+			<ul class="nav">
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="">Shop by Pet</a></li>
+				<li><a href="./products.html">Products</a></li>
+				<li><a href="">Promos</a></li>
 			</ul>
-		</header>
-
-		<div class="main" id="main">
-			<div class="slideNav" id="slideNav">
-				<div class="nav-container">
-					<img
-						class="header-logo"
-						src="img/logo.png"
-						alt="Shop logo with cartoon dogs"
-						size="cover"
-					/>
-					<a href="">Shop by Pet</a>
-					<a href="">Products</a>
-				</div>
-
-				<div class="search" id="search">
-					<label for="search-input"></label>
-					<input aria-label="Search" autocomplete="on" id="search-input" name="search-input" placeholder="Search" speech type="search">
-					<svg viewbox="0 0 24 24">
-						<path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+			<div class="navBurgerIcon">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<div class="search" id="search">
+				<label for="search-input"></label>
+				<input aria-label="Search" autocomplete="on" id="search-input" name="search-input" placeholder="Search"
+					speech type="search">
+				<svg viewbox="0 0 24 24">
+					<path
+						d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
 						<path d="M0 0h24v24H0z" fill="none">
-					</svg>
+				</svg>
+			</div>
+		</div>
+		<div class="hamburgMenu" id="hamburgMenu">
+			<a href="#Home">Home</a>
+			<a href="#Products">Products</a>
+			<a href="#Promos">Visit Us!</a>
+		</div>
+
+		<ul class="rightNav-container">
+			<li>
+				<div class="rn-wrapper">
+					<button type="button" class="userButton"></button>
+					<a>Account</a>
 				</div>
-				<div class="cart-container" id="navCart">
+			</li>
+			<li>
+				<div class="rn-wrapper">
 					<button type="button" class="cartButton"></button>
-					<a id="slideNav-cartText">Cart</a>
-					<div class="dropdown-wrapper">
-						<div class="dropdown-content">
-							<div class="cart-header">
-								<div class="cart-totalItems">
-									<figure>
-										<img
-											src="../img/dogcart-dark.png"
-											alt="Dog Cart Icon"
-										/>
+					<a>Cart</a>
+				</div>
+			</li>
+		</ul>
+	</header>
+
+	<div class="main" id="main">
+		<div class="slideNav" id="slideNav">
+			<div class="nav-container">
+				<img class="header-logo" src="img/logo.png" alt="Shop logo with cartoon dogs" size="cover" />
+				<a href="">Shop by Pet</a>
+				<a href="">Products</a>
+			</div>
+			<div class="navBurgerIcon">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<div class="search" id="search">
+				<label for="search-input"></label>
+				<input aria-label="Search" autocomplete="on" id="search-input" name="search-input" placeholder="Search"
+					speech type="search">
+				<svg viewbox="0 0 24 24">
+					<path
+						d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+						<path d="M0 0h24v24H0z" fill="none">
+				</svg>
+			</div>
+			<div class="cart-container" id="navCart">
+				<button type="button" class="cartButton"></button>
+				<a id="slideNav-cartText">Cart</a>
+				<div class="dropdown-wrapper">
+					<div class="dropdown-content">
+						<div class="cart-header">
+							<div class="cart-totalItems">
+								<figure>
+									<img src="../img/dogcart-dark.png" alt="Dog Cart Icon" />
+								</figure>
+								<span class="numitems">3 Items</span>
+							</div>
+							<div class="cart-total">
+								<span id="total">Total:</span>
+								<span class="main-color-text">$2,229.97</span>
+							</div>
+						</div>
+						<ul class="items">
+							<li>
+								<a class="item__link" href="#23456">
+									<figure class="item__img">
+										<img src="img/dogproduct4.png" alt="Canine Dewormer" />
 									</figure>
-									<span class="numitems">3 Items</span>
-								</div>
-								<div class="cart-total">
-									<span id="total">Total:</span>
-									<span class="main-color-text"
-										>$2,229.97</span
-									>
-								</div>
-							</div>
-							<ul class="items">
-								<li>
-									<a class="item__link" href="#23456">
-										<figure class="item__img">
-											<img
-												src="img/dogproduct4.png"
-												alt="Canine Dewormer"
-											/>
-										</figure>
-										<div class="item__data">
-											<p class="item__name">
-												Canine Dewormer
-											</p>
-										</div>
-									</a>
-									<div class="item_controller-wrapper">
-										<div class="item__count">
-											<input
-												type="number"
-												min="1"
-												max="9"
-												step="1"
-												value="1"
-											/>
-											<div class="item__count-nav">
-												<div
-													class="item__count-button item__count-up"
-												>
-													+
-												</div>
-												<div
-													class="item__count-button item__count-down"
-												>
-													-
-												</div>
+									<div class="item__data">
+										<p class="item__name">
+											Canine Dewormer
+										</p>
+									</div>
+								</a>
+								<div class="item_controller-wrapper">
+									<div class="item__count">
+										<input type="number" min="1" max="9" step="1" value="1" />
+										<div class="item__count-nav">
+											<div class="item__count-button item__count-up">
+												+
 											</div>
-										</div>
-										<div
-											type="button"
-											name="delete"
-											class="box"
-										>
-											<div class="box">
-												<div
-													class="btn-icon close-icon"
-												>
-													<div class="x left"></div>
-													<div class="x right"></div>
-												</div>
+											<div class="item__count-button item__count-down">
+												-
 											</div>
 										</div>
 									</div>
-								</li>
-								<li>
-									<a class="item__link" href="#23456">
-										<figure class="item__img">
-											<img
-												src="img/dogproduct2.png"
-												alt="Milk Bone"
-											/>
-										</figure>
-										<div class="item__data">
-											<p class="item__name">
-												Milk Bone
-											</p>
-										</div>
-									</a>
-									<div class="item_controller-wrapper">
-										<div class="item__count">
-											<input
-												type="number"
-												min="1"
-												max="9"
-												step="1"
-												value="1"
-											/>
-											<div class="item__count-nav">
-												<div
-													class="item__count-button item__count-up"
-												>
-													+
-												</div>
-												<div
-													class="item__count-button item__count-down"
-												>
-													-
-												</div>
-											</div>
-										</div>
-										<div
-											type="button"
-											name="delete"
-											class="box"
-										>
-											<div class="box">
-												<div
-													class="btn-icon close-icon"
-												>
-													<div class="x left"></div>
-													<div class="x right"></div>
-												</div>
+									<div type="button" name="delete" class="box">
+										<div class="box">
+											<div class="btn-icon close-icon">
+												<div class="x left"></div>
+												<div class="x right"></div>
 											</div>
 										</div>
 									</div>
-								</li>
-							</ul>
-						</div>
+								</div>
+							</li>
+							<li>
+								<a class="item__link" href="#23456">
+									<figure class="item__img">
+										<img src="img/dogproduct2.png" alt="Milk Bone" />
+									</figure>
+									<div class="item__data">
+										<p class="item__name">
+											Milk Bone
+										</p>
+									</div>
+								</a>
+								<div class="item_controller-wrapper">
+									<div class="item__count">
+										<input type="number" min="1" max="9" step="1" value="1" />
+										<div class="item__count-nav">
+											<div class="item__count-button item__count-up">
+												+
+											</div>
+											<div class="item__count-button item__count-down">
+												-
+											</div>
+										</div>
+									</div>
+									<div type="button" name="delete" class="box">
+										<div class="box">
+											<div class="btn-icon close-icon">
+												<div class="x left"></div>
+												<div class="x right"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<!-- TODO -->
-			<div class="carousel-container">
-				<div class="carousel-slides fade">
-					<img src="img/slider1.jpg" alt="" />
+		<!-- TODO -->
+		<div class="carousel-container">
+			<div class="carousel-slides fade">
+				<img src="img/slider1.jpg" alt="" />
+			</div>
+			<div class="carousel-slides fade">
+				<img src="img/slider2.jpg" alt="" />
+			</div>
+			<div class="carousel-slides fade">
+				<img src="img/slider3.jpg" alt="" />
+			</div>
+			<div class="carousel-slides fade">
+				<img src="img/slider4.jpg" alt="" />
+			</div>
+			<div class="carousel-slides fade">
+				<img src="img/slider5.jpg" alt="" />
+			</div>
+			<a class="prev" id="carousel-prevBtn">&#10094;</a>
+			<a class="next" id="carousel-nextBtn">&#10095;</a>
+		</div>
+
+		<div class="mostwanted-container">
+			<h1>Best Sellers</h1>
+			<div class="mw-wrapper">
+				<div class="card categ1">
+					<img src="img/dogfood.png" alt="dog food" />
+					<div class="container">
+						<h2>Dog Food</h2>
+					</div>
 				</div>
-				<div class="carousel-slides fade">
-					<img src="img/slider2.jpg" alt="" />
+				<div class="card categ2">
+					<img src="img/petmeds.png" alt="Pet Medicines food" />
+					<div class="container">
+						<h2>Pet Medicines</h2>
+					</div>
 				</div>
-				<div class="carousel-slides fade">
-					<img src="img/slider3.jpg" alt="" />
+				<div class="card categ3">
+					<img src="img/petacc.png" alt="Pet Accessories" />
+					<div class="container">
+						<h2>Pet Accessories</h2>
+					</div>
 				</div>
-				<div class="carousel-slides fade">
-					<img src="img/slider4.jpg" alt="" />
+				<div class="card categ4">
+					<img src="img/catfood.png" alt="Cat Food" />
+					<div class="container">
+						<h2>Cat Food</h2>
+					</div>
 				</div>
-				<div class="carousel-slides fade">
-					<img src="img/slider5.jpg" alt="" />
+				<div class="card categ5">
+					<img src="img/petbeds.png" alt="Pet Beds" />
+					<div class="container">
+						<h2>Pet Beds</h2>
+					</div>
 				</div>
-				<a class="prev" id="carousel-prevBtn">&#10094;</a>
-				<a class="next" id="carousel-nextBtn">&#10095;</a>
+				<div class="card categ6">
+					<img src="img/catscratchers.png" alt="Cat Scratchers" />
+					<div class="container">
+						<h2>Cat Scratchers</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item-carousel">
+			<div class="item-carousel-header">
+				<h1>Today's Deals</h1>
+				<div class="btnControls">
+					<a class="PrevItemBtn">&#10094;</a>
+					<a class="NextItemBtn">&#10095;</a>
+				</div>
+
 			</div>
 
-			<div class="mostwanted-container">
-				<h1>Best Sellers</h1>
-				<div class="mw-wrapper">
-					<div class="card categ1">
-						<img src="img/dogfood.png" alt="dog food" />
-						<div class="container">
-							<h2>Dog Food</h2>
-						</div>
-					</div>
-					<div class="card categ2">
-						<img src="img/petmeds.png" alt="Pet Medicines food" />
-						<div class="container">
-							<h2>Pet Medicines</h2>
-						</div>
-					</div>
-					<div class="card categ3">
-						<img src="img/petacc.png" alt="Pet Accessories" />
-						<div class="container">
-							<h2>Pet Accessories</h2>
-						</div>
-					</div>
-					<div class="card categ4">
-						<img src="img/catfood.png" alt="Cat Food" />
-						<div class="container">
-							<h2>Cat Food</h2>
-						</div>
-					</div>
-					<div class="card categ5">
-						<img src="img/petbeds.png" alt="Pet Beds" />
-						<div class="container">
-							<h2>Pet Beds</h2>
-						</div>
-					</div>
-					<div class="card categ6">
-						<img src="img/catscratchers.png" alt="Cat Scratchers" />
-						<div class="container">
-							<h2>Cat Scratchers</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="deals-container">
-				<div class="row dog-items">
-					<h1>Dog deals of the week</h1>
-
-					<br />
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct1.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+			<div class="item-slides-wrapper">
+				<div class="item-slide">
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>PART 1</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
+							</div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
 						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+					</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
+							</div>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct2.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct3.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
-						</div>
-					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct4.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
-							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
-							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
 				</div>
-
-				<div class="row cat-items">
-					<h1>Cat deals of the week</h1>
-					<br />
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct1.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Lorem Ipsum.</span>
-								</div>
-								<div class="a-size">
-									Description :
-									<span class="size">Lorem Ipsum Dolor</span>
-								</div>
+				<div class="item-slide">
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>PART 2</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct2.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct3.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct4.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
 				</div>
-
-				<div class="row pig-items">
-					<h1>Pig deals of the week</h1>
-					<br />
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct1.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+				<div class="item-slide">
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>PART 3</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct2.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct3.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
-
-					<div class="item-wrapper">
-						<div class="box-up">
-							<img class="img" src="img/dogproduct4.png" alt="" />
-							<div class="img-info">
-								<div class="info-inner">
-									<span class="p-name">Lorem Ipsum</span>
-									<span class="p-company">Dolor Co.</span>
-								</div>
-								<div class="a-size">
-									Description:
-									<span class="size"
-										>Lorem ipsum dolor sit amet, consectetur
-										adipiscing elit, sed do eiusmod tempor.
-										<a>More Info</a></span
-									>
-								</div>
+					<div class="itemCard">
+						<img src="img/dogproduct1.png" alt="dog food" />
+						<div class="item-information">
+							<div class="itemName-container">
+								<p><strong>Manufacturer</strong></p>
+								<p>Product Name: Lorem ipsum dolor sit amet</p>
 							</div>
-						</div>
-
-						<div class="box-down">
-							<div class="h-bg">
-								<div class="h-bg-inner"></div>
+							<div class="price-container">
+								<p class="item_price">₱299</p>
 							</div>
-
-							<a class="cart" href="#">
-								<span class="price">$120</span>
-								<span class="add-to-cart">
-									<span class="txt">Add in cart</span>
-								</span>
-							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<script src="./js/index.js"></script>
-	</body>
+	</div>
+
+	<script src="./js/index.js"></script>
+</body>
+
 </html>
