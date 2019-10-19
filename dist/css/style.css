@@ -42,7 +42,7 @@ header {
 	align-items: center;
 }
 
-.social-container .header-visitus {
+.social-container .social-container_img {
 	max-width: 30%;
 }
 
@@ -56,18 +56,15 @@ header {
 	align-self: center;
 }
 
-/* Add a hover effect if you want */
 .social-container .fa:hover {
 	opacity: 0.7;
 }
 
-/* Facebook */
 .social-container .fa-facebook {
 	background: #3b5998;
 	color: white;
 }
 
-/* Twitter */
 .social-container .fa-instagram {
 	background: radial-gradient(circle at 30% 107%,
 			#fdf497 0%,
@@ -83,11 +80,11 @@ header {
 	margin: 5px;
 }
 
-.title-container .header-logo {
+.title-container .title-container_logo {
 	max-width: 100%;
 }
 
-.rightNav-container {
+.controlPanel-container {
 	grid-area: rightnav;
 	align-self: center;
 	justify-self: end;
@@ -96,7 +93,7 @@ header {
 	color: white;
 }
 
-.rightNav-container li {
+.controlPanel-container li {
 	float: left;
 	list-style-type: none;
 	padding: 5px 10px;
@@ -108,7 +105,7 @@ header {
 	transition: 0.2s;
 }
 
-.rightNav-container li:hover {
+.controlPanel-container li:hover {
 	color: rgba(255, 255, 255, 0.733);
 }
 
@@ -645,7 +642,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .carousel-slides img {
 	width: 100%;
-	height: 35vw;
+	/* height: 35vw; */
 }
 
 .prev,
@@ -920,21 +917,16 @@ input[type='number']::-webkit-outer-spin-button {
 		display: none;
 	}
 
-	.rightNav-container {
+	.controlPanel-container {
 		grid-area: rightNavigation;
 		display: flex;
 		padding: 0;
 		margin: 0;
 	}
 
-	.rightNav-container li {
+	.controlPanel-container li {
 		padding: 1vw;
 		font-size: 0.5rem;
-	}
-
-	.rn-wrapper {
-		display: block;
-		text-align: center;
 	}
 
 	.userButton,
@@ -977,12 +969,12 @@ input[type='number']::-webkit-outer-spin-button {
 		padding: 1vw 1vw;
 	}
 
-	.rightNav-container {
+	.controlPanel-container {
 		margin: 0;
 		justify-self: center;
 	}
 
-	.rightNav-container li {
+	.controlPanel-container li {
 		float: none;
 		list-style-type: none;
 		padding: 0px;

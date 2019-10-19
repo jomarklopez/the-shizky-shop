@@ -18,6 +18,7 @@ export const updateItemCount = () => {
 // ANNOUNCEMENTS CAROUSEL
 
 let slideIndex = 1;
+let slidePause = false;
 var slideAuto;
 
 export const showSlides = () => {
@@ -25,8 +26,16 @@ export const showSlides = () => {
     if (slideIndex === elements.carouselImages.length) {
         slideIndex = 0;
     }
-    slideIndex++;
-    slideAuto = setTimeout(showSlides, 2000);
+    if (slidePause) {
+        slideIndex++;
+        setTimeout(showSlides, 6000);
+        slidePause = false;
+        console.log('Has paused');
+    } else {
+        slideIndex++;
+        setTimeout(showSlides, 4000);
+        console.log('Has changed');
+    }
 }
 
 let slideChanger = () => {
@@ -38,14 +47,12 @@ let slideChanger = () => {
 export const prevSlide = () => {
     if (slideIndex === 1) {
         slideIndex = elements.carouselImages.length;
+        slidePause = true;
         slideChanger();
-        clearTimeout(slideAuto);
-        setTimeout(showSlides, 4000);
     } else {
         slideIndex--;
+        slidePause = true;
         slideChanger();
-        clearTimeout(slideAuto);
-        setTimeout(showSlides, 4000);
     }
 
 }
@@ -53,14 +60,12 @@ export const prevSlide = () => {
 export const nextSlide = () => {
     if (slideIndex === elements.carouselImages.length) {
         slideIndex = 1;
+        slidePause = true;
         slideChanger();
-        clearTimeout(slideAuto);
-        setTimeout(showSlides, 4000);
     } else {
         slideIndex++;
+        slidePause = true;
         slideChanger();
-        clearTimeout(slideAuto);
-        setTimeout(showSlides, 4000);
     }
 }
 
